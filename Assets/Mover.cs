@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {   
+    // Serialize fields come up in Unity inspector in the right
     [SerializeField] float xSpeed = 10f;
     [SerializeField] float zSpeed = 10f;
 
@@ -16,8 +17,7 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float xAxis = Input.GetAxis("Horizontal");
-        // float yAxis = Input.GetAxis("Vertical");
+        // Time.deltaTime makes the movement FPS independent
         float xAxis = Input.GetAxis("Horizontal") * Time.deltaTime * xSpeed;
         float zAxis = Input.GetAxis("Vertical")* Time.deltaTime * zSpeed;
         transform.Translate(xAxis,0,zAxis);
