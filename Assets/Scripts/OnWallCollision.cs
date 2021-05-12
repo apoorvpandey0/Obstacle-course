@@ -8,6 +8,6 @@ public class OnWallCollision : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
 
         // this gets the mesh renderer component from the inspector and changes its color value for the object
-        GetComponent<MeshRenderer>().material.color = Color.red;
+        GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 }

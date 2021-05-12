@@ -21,5 +21,6 @@ public class Mover : MonoBehaviour
         float xAxis = Input.GetAxis("Horizontal") * Time.deltaTime * xSpeed;
         float zAxis = Input.GetAxis("Vertical")* Time.deltaTime * zSpeed;
         transform.Translate(xAxis,0,zAxis);
+        //  GetComponent<MeshRenderer>().material.color = Color.magenta;
     }
 }
