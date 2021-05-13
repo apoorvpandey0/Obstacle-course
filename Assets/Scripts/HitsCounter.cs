@@ -6,7 +6,12 @@ public class HitsCounter : MonoBehaviour
 {
     int hits = 0;
     private void OnCollisionEnter(Collision other) {
-        hits++;
-        Debug.Log("Hits: "+hits);
+
+        if (other.gameObject.tag !="Hit")
+        {
+            hits++;
+            Debug.Log("Hits: "+hits);            
+        }
+
     }
 }
